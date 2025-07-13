@@ -1,88 +1,25 @@
-RECOMMENDER
-package com.example.recommender;
+NAME : DEEKSHITHA A
 
-import java.util.*;
+INTERN ID : CT04DG1119
 
-public class RecommenderSystem {
+TIME DURATION : 4 WEEKS 
 
-    // Step 1: Store sample user ratings for different products
-    private static Map<String, Double> getUserRatings() {
-        Map<String, Double> ratings = new HashMap<>();
-        ratings.put(" Mobile Phone", 4.8);
-        ratings.put(" Sports Shoes", 4.5);
-        ratings.put(" Headphones", 4.2);
-        ratings.put(" Books", 3.9);
-        ratings.put(" Handbag", 3.5);
-        ratings.put(" Laptop", 4.9);
-        ratings.put(" Smart Watch", 4.0);
-        return ratings;
-    }
+MENTOR NAME : NEELA SANTHOSH KUMAR 
 
-    // Step 2: Generate top N product recommendations based on score
-    private static List<Map.Entry<String, Double>> getTopRecommendations(Map<String, Double> ratings, int topN) {
-        List<Map.Entry<String, Double>> sortedList = new ArrayList<>(ratings.entrySet());
-        sortedList.sort((a, b) -> Double.compare(b.getValue(), a.getValue())); // sort high to low
-        return sortedList.subList(0, Math.min(topN, sortedList.size()));
-    }
+COMPANY NAME : CODTECH IT SOLUTIONS 
 
-    // Step 3: Display the recommendations
-    private static void displayRecommendations(List<Map.Entry<String, Double>> recommendations) {
-        System.out.println("🎯 AI-Based Product Recommendations:");
-        System.out.println("-------------------------------------");
-        for (Map.Entry<String, Double> entry : recommendations) {
-            System.out.println("✅ Product: " + entry.getKey() + " | Score: " + entry.getValue());
-        }
-        System.out.println("-------------------------------------");
-        System.out.println("✨ Thank you for using our system!");
-    }
+DOMAIN NAME : JAVA PROGRAMMING 
 
-    // Main method
-    public static void main(String[] args) {
-        System.out.println("🔍 Loading recommendations...");
+DESCRIPTION : This project titled "AI-Based Recommendation System" involves building a simple yet functional recommendation engine using Java as the primary programming language. The objective of this task is to simulate an AI system that suggests products based on user preferences or historical ratings. The application demonstrates the logic behind personalized product recommendations, much like what is used in platforms such as Amazon, Flipkart, or Netflix. Although we do not use large datasets or machine learning algorithms in this version, it provides a clear conceptual foundation for how such systems operate internally.
 
-        Map<String, Double> ratings = getUserRatings(); // fetch product scores
-        List<Map.Entry<String, Double>> topProducts = getTopRecommendations(ratings, 5); // top 5
+To complete this project, we used Visual Studio Code (VS Code) as the main code editor, which is lightweight, efficient, and perfect for writing Java applications. Alongside VS Code, we configured and used Apache Maven, which is a powerful build automation tool used primarily for Java projects. Maven helps manage dependencies, compile code, and run Java applications using the command line. It uses a special XML file called pom.xml to define project structure, plugins, and the main class to execute.
 
-        displayRecommendations(topProducts); // show output
-    }
-}
+In this system, we developed a class named RecommenderSystem.java under the package com.example.recommender. This class includes a method to simulate sample product ratings by users, and then sorts and displays the top-rated products as recommendations. We used core Java collections, like HashMap, ArrayList, and Map.Entry, to handle product data and compute recommendations. No external dataset or API is used, but the logic mimics real-world recommendation systems.
 
-POM.XLM
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
-         http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+To run the program, we used the Maven exec plugin, which allows execution of Java classes directly from the command line using the mvn exec:java command. The main class was declared inside the pom.xml file to ensure Maven knew which class to execute. The output is shown directly in the terminal and displays the top 5 recommended products along with their scores. This simulates a basic AI recommendation output in a user-friendly format.
 
-  <groupId>com.example</groupId>
-  <artifactId>airecommender</artifactId>
-  <version>1.0-SNAPSHOT</version>
+Although this project does not use machine learning libraries such as Apache Mahout, the structure and logic align with how such libraries are used in real applications. Apache Mahout is a tool designed for scalable machine learning, especially in recommendation, classification, and clustering, and can be integrated into Java applications when needed. In this basic version, we focused more on Java logic and structure rather than ML algorithms.
 
-  <dependencies>
-    <!-- Apache Mahout -->
-    <dependency>
-      <groupId>org.apache.mahout</groupId>
-      <artifactId>mahout-core</artifactId>
-      <version>0.9</version>
-    </dependency>
+In summary, the tools used for this project include Java, Maven, Visual Studio Code, and basic terminal commands to compile and run the program. The application can be expanded further by integrating Apache Mahout, adding user input, using CSV datasets, or connecting to a database to store and retrieve preferences dynamically. This task provides a foundational understanding of how modern AI recommendation systems work, and how core Java can be used to build simple AI-like behavior. It is ideal for beginners learning Java and interested in artificial intelligence or software development careers.
 
-    <!-- Logging dependency -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-      <version>1.7.25</version>
-    </dependency>
-  </dependencies>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>3.1.0</version>
-        <configuration>
-          <mainClass>com.example.recommender.RecommenderSystem</mainClass>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
-</project>
+OUTPUT : 
