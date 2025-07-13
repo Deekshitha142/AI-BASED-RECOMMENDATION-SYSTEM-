@@ -22,4 +22,4 @@ Although this project does not use machine learning libraries such as Apache Mah
 
 In summary, the tools used for this project include Java, Maven, Visual Studio Code, and basic terminal commands to compile and run the program. The application can be expanded further by integrating Apache Mahout, adding user input, using CSV datasets, or connecting to a database to store and retrieve preferences dynamically. This task provides a foundational understanding of how modern AI recommendation systems work, and how core Java can be used to build simple AI-like behavior. It is ideal for beginners learning Java and interested in artificial intelligence or software development careers.
 
-OUTPUT : 
+OUTPUT : ![Image](https://github.com/user-attachments/assets/cf1a1355-af28-487f-b5a0-f63b9eeda92d)
